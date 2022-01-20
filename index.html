@@ -33,14 +33,27 @@
     <main>
       <!--******************* SEARCH AND EXPLORE *******************-->
       <section id="section-search">
-        <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-        <div id="container-explore">
-          <h2>Réservez le menu qui vous convient</h2>
-          <p>
-            Découvrez des restaurants d'exception, sélectionné par nos soins.
-          </p>
-          <button>Explorer nos restaurants</button>
-        </div>
+        <form action="index.html" method="get">
+          <div id="container-search">
+            <label id="icon-search" for="place">
+              <i class="fas fa-map-marker-alt"></i>
+            </label>
+            <input
+              type="text"
+              name="place"
+              id="place"
+              value="Paris, Belleville"
+              placeholder="Localisation"
+            />
+          </div>
+          <div id="container-explore">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>
+              Découvrez des restaurants d'exception, sélectionné par nos soins.
+            </p>
+            <input type="submit" value="Explorer nos restaurants" />
+          </div>
+        </form>
       </section>
 
       <!--******************* FONCTIONNEMENT *******************-->
