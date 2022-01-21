@@ -84,11 +84,17 @@ h1 {
   box-shadow: 0px 10px 5px -10px rgba(0, 0, 0, 0.35) inset;
 }
 
+#icon-search {
+  cursor: pointer;
+}
+
 input[type="text"] {
   border: none;
   background-color: inherit;
-  padding: 1px 15px;
+  padding: 0;
   font-weight: 500;
+  width: 110px;
+  margin-left: 15px;
 }
 
 input[type="text"]:focus-visible {
@@ -114,12 +120,19 @@ input[type="text"]:focus-visible {
 input[type="submit"] {
   margin: 25px 0;
   padding: 15px 20px;
-  background-color: var(--secondaryRose);
   border: none;
   border-radius: 25px;
   color: white;
 
+  background: rgb(255, 121, 218);
+  background: linear-gradient(
+    170deg,
+    rgba(255, 121, 218, 1) 0%,
+    rgba(147, 86, 220, 1) 100%
+  );
+
   box-shadow: var(--buttonDarker);
+  cursor: pointer;
 }
 
 /************************************** FUNCTIONING SECTION **************************************/
@@ -133,7 +146,7 @@ input[type="submit"] {
 }
 
 #section-functioning button {
-  width: 100%;
+  width: calc(100% - 12.5px);
   margin: 13.5px 0;
   padding: 25px 0;
   border-radius: 20px;
@@ -144,7 +157,12 @@ input[type="submit"] {
   box-shadow: var(--buttonShadow);
 
   position: relative;
+  left: 12.5px;
+
+  text-align: left;
+
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 #section-functioning button div {
@@ -168,17 +186,19 @@ input[type="submit"] {
 }
 
 #section-functioning button i {
+  margin-left: 8vw;
+  margin-right: 5vw;
+
   color: var(--darkestGrey);
 }
-/*
+
 #section-functioning button:hover {
-   background-color: var(--primaryPurple); 
+  background-color: rgba(147, 86, 220, 0.15);
 }
 
-#section-functioning button:hover span {
-  background-color: var(--primaryPurple);
+#section-functioning button:hover i {
+  color: var(--primaryPurple);
 }
-*/
 
 /************************************** RESTAURANTS SECTION **************************************/
 #section-resto {
@@ -193,14 +213,14 @@ input[type="submit"] {
 }
 
 .card-resto {
-  /* width: 100%; */
   display: block;
   border-radius: 15px;
   background-color: white;
 
-  box-shadow: var(--cardShadow);
-
   position: relative;
+
+  box-shadow: var(--cardShadow);
+  transition: all 0.3s ease;
 }
 
 .card-resto img {
@@ -248,6 +268,15 @@ input[type="submit"] {
   margin-bottom: 0;
   font-weight: 300;
   font-size: 17px;
+}
+
+.card-resto svg {
+  margin: auto 0;
+}
+
+.card-resto:hover {
+  transform: scale(1.04);
+  box-shadow: var(--cardShadowPurple);
 }
 
 /************************************** FOOTER **************************************/
