@@ -252,12 +252,13 @@ input[type="submit"] {
 .card-resto-body {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 12px;
   height: 72px;
 }
 
 .card-resto-body h3 {
-  margin-top: 12px;
+  margin-top: 0;
   margin-bottom: 3px;
   font-weight: 800;
   font-size: 18px;
@@ -271,7 +272,7 @@ input[type="submit"] {
 }
 
 .card-resto svg {
-  margin: auto 0;
+  /* margin: auto 0; */
 }
 
 .card-resto:hover {
