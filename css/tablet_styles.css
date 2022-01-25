@@ -1,0 +1,19 @@
+/************************************** HEADER **************************************/
+header {
+  margin: 30px 0;
+}
+
+/************************************** SEARCH SECTION **************************************/
+#container-search {
+  padding: 25px 0;
+}
+
+/************************************** FOOTER **************************************/
+footer {
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+}

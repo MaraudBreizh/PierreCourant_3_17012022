@@ -28,6 +28,16 @@
 }
 
 /************************************** RESTAURANTS SECTION **************************************/
+#section-resto {
+  border-radius: 40px;
+
+  margin-bottom: 70px;
+}
+
+#section-resto h2 {
+  margin-bottom: 50px;
+}
+
 #section-resto ul {
   display: flex;
   flex-flow: row wrap;
@@ -35,24 +45,21 @@
   row-gap: 2.5vw;
 }
 
-#section-resto h2 {
-  margin-bottom: 50px;
-}
-
 #section-resto ul li {
   width: 48.5%;
 }
 
+.card-resto {
+  border-radius: 25px;
+}
+
 .card-resto img {
   height: 23vw;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
-/************************************** FOOTER **************************************/
-footer {
-  text-align: center;
-}
-
-footer ul {
-  display: flex;
-  justify-content: space-around;
+.new {
+  top: 2vw;
+  right: 2vw;
 }

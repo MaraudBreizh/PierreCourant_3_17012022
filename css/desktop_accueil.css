@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  row-gap: 70px;
+}
+
+/************************************** FUNCTIONING SECTION **************************************/
+
+#section-search {
+  width: 100%;
+}
+
+#section-functioning {
+  width: 30%;
+}
+
+#section-functioning ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#section-functioning h2 {
+  margin-bottom: 50px;
+}
+
+/************************************** RESTAURANTS SECTION **************************************/
+
+#section-resto {
+  width: 60%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+#section-resto ul {
+  row-gap: 1.5vw;
+}
+
+.card-resto img {
+  height: 15vw;
+}
+
+.new {
+  top: 1.5vw;
+  right: 1.5vw;
+}
