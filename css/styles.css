@@ -17,11 +17,11 @@ html {
   /* fontsize */
   --h1FontSize: 1.65em;
   --h2FontSize: 1.55em;
-  --h2MenuFontSize: 16.5px;
+  --h2Menu: 16.5px;
   --h3RestoCard: 18px;
   --pFontSize: 1.1em;
   --pRestoCard: 17px;
-  --pMenuFontSize: 15px;
+  --pMenu: 15px;
 
   /* color */
   --primaryPurple: #9356dc;
