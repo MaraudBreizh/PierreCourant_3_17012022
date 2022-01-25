@@ -19,11 +19,53 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- intégration des feuilles de style externes -->
     <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- intégration des feuilles de style internes -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/menus.css" />
 
+    <!-- Media queries for tablet -->
+    <link
+      rel="stylesheet"
+      media="all and (min-width: 768px)"
+      href="css/tablet_styles.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all and (min-width: 768px)"
+      href="css/tablet_menus.css"
+    />
+
+    <!-- Media queries for desktop -->
+    <link
+      rel="stylesheet"
+      media="all and (min-width: 992px)"
+      href="css/desktop_menus.css"
+    />
+
     <title>OMF - À la française</title>
+
+    <!-- Fav-icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/fav-icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/fav-icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/fav-icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/fav-icon/site.webmanifest" />
   </head>
 
   <body>
@@ -49,104 +91,106 @@
         </div>
 
         <!--******************* MENU *******************-->
-        <section id="section-starter">
-          <h2>ENTRÉES</h2>
-          <ul>
-            <li>
-              <button>
-                <h3>Tartare de poulpe acidulé</h3>
-                <div class="container-price">
-                  <p>Aux zestes d'orange</p>
-                  <p class="price">25€</p>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <h3>Velouté de légumes d'antan</h3>
-                <div class="container-price">
-                  <p>Carotte, panais, topinambour</p>
-                  <p class="price">35€</p>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <h3>Soupe à l'oignon</h3>
-                <div class="container-price">
-                  <p>Revisitée</p>
-                  <p class="price">20€</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-        </section>
+        <div id="container-menu-items">
+          <section id="section-starter">
+            <h2>ENTRÉES</h2>
+            <ul>
+              <li>
+                <button>
+                  <h3>Tartare de poulpe acidulé</h3>
+                  <div class="container-price">
+                    <p>Aux zestes d'orange</p>
+                    <p class="price">25€</p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <h3>Velouté de légumes d'antan</h3>
+                  <div class="container-price">
+                    <p>Carotte, panais, topinambour</p>
+                    <p class="price">35€</p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <h3>Soupe à l'oignon</h3>
+                  <div class="container-price">
+                    <p>Revisitée</p>
+                    <p class="price">20€</p>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </section>
 
-        <section id="section-maindish">
-          <h2>PLATS</h2>
-          <ul>
-            <li>
-              <button>
-                <h3>Coquilles Saint-Jacques</h3>
-                <div class="container-price">
-                  <p>Accompagnées d'une purée de panais</p>
-                  <p class="price">40€</p>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <h3>Magret de canard</h3>
-                <div class="container-price">
-                  <p>Et parmentier de pommes de terre</p>
-                  <p class="price">35€</p>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                <div class="container-price">
-                  <p>Sur son lit de gnocchis aux légumes</p>
-                  <p class="price">44€</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-        </section>
+          <section id="section-maindish">
+            <h2>PLATS</h2>
+            <ul>
+              <li>
+                <button>
+                  <h3>Coquilles Saint-Jacques</h3>
+                  <div class="container-price">
+                    <p>Accompagnées d'une purée de panais</p>
+                    <p class="price">40€</p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <h3>Magret de canard</h3>
+                  <div class="container-price">
+                    <p>Et parmentier de pommes de terre</p>
+                    <p class="price">35€</p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                  <div class="container-price">
+                    <p>Sur son lit de gnocchis aux légumes</p>
+                    <p class="price">44€</p>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </section>
 
-        <section id="section-dessert">
-          <h2>DESSERTS</h2>
-          <ul>
-            <li>
-              <button>
-                <h3>Pétales de violettes glacés</h3>
-                <div class="container-price">
-                  <p>Et purée de noisettes</p>
-                  <p class="price">18€</p>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <h3>Fondant au chocolat</h3>
-                <div class="container-price">
-                  <p>Revisité</p>
-                  <p class="price">22€</p>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <h3>Millefeuille croustillant</h3>
-                <div class="container-price">
-                  <p>Myrtilles et pâte d’amande</p>
-                  <p class="price">23€</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-        </section>
+          <section id="section-dessert">
+            <h2>DESSERTS</h2>
+            <ul>
+              <li>
+                <button>
+                  <h3>Pétales de violettes glacés</h3>
+                  <div class="container-price">
+                    <p>Et purée de noisettes</p>
+                    <p class="price">18€</p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <h3>Fondant au chocolat</h3>
+                  <div class="container-price">
+                    <p>Revisité</p>
+                    <p class="price">22€</p>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <h3>Millefeuille croustillant</h3>
+                  <div class="container-price">
+                    <p>Myrtilles et pâte d’amande</p>
+                    <p class="price">23€</p>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
 
         <!-- COMMAND -->
         <div id="container-checkout-button">

@@ -33,6 +33,7 @@ img {
 #container-name h1 {
   text-align: left;
   margin: 15px 0 35px;
+  font-weight: 500;
 
   position: relative;
 }
@@ -78,13 +79,13 @@ img {
   font-weight: 300;
 }
 
-#container-menu .price {
-  font-weight: 900;
-}
-
 .container-price {
   display: flex;
   justify-content: space-between;
+}
+
+#container-menu .price {
+  font-weight: 900;
 }
 
 /*********************************** COMMAND ***********************************/

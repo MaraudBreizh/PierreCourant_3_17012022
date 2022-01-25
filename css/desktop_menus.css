@@ -1,0 +1,24 @@
+#container-menu {
+  width: 90%;
+  max-width: 1220px;
+
+  margin: 3vw auto -3vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+#container-menu h1 {
+  margin-left: 2vw;
+  margin-bottom: 20px;
+}
+
+#container-menu-items {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 2vw;
+}
+
+#container-menu h2 {
+  /* margin-left: 2vw; */
+  font-size: 1.2em;
+}
