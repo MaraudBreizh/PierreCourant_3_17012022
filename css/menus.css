@@ -53,7 +53,7 @@ img {
   margin-top: 30px;
 }
 
-#container-menu ul li button {
+.menu-items {
   width: 100%;
   text-align: left;
   margin: 7px 0;

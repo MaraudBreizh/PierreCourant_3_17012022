@@ -82,7 +82,7 @@ input[type="submit"]:hover {
   margin-bottom: 18px;
 }
 
-#section-functioning button {
+.button-functioning {
   width: calc(100% - 12.5px);
   margin: 13.5px 0;
   padding: 25px 0;
@@ -102,7 +102,7 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-#section-functioning button div {
+.number-functioning {
   background-color: var(--primaryPurple);
   color: white;
   border-radius: 50%;
@@ -122,18 +122,18 @@ input[type="submit"]:hover {
   align-items: center;
 }
 
-#section-functioning button i {
+.button-functioning i {
   margin-left: 8vw;
   margin-right: 5vw;
 
   color: var(--darkestGrey);
 }
 
-#section-functioning button:hover {
+.button-functioning:hover {
   background-color: rgba(147, 86, 220, 0.15);
 }
 
-#section-functioning button:hover i {
+.button-functioning:hover i {
   color: var(--primaryPurple);
 }
 
