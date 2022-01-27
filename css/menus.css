@@ -104,9 +104,21 @@ img {
   background: linear-gradient(
     170deg,
     rgba(255, 121, 218, 1) 0%,
-    rgba(147, 86, 220, 1) 100%
+    rgba(147, 86, 220, 1) 85%
   );
 
   box-shadow: var(--buttonDarker);
   cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+#container-checkout-button button:hover {
+  background: linear-gradient(
+    -170deg,
+    rgba(255, 121, 218, 1) 0%,
+    rgba(147, 86, 220, 1) 85%
+  );
+
+  transform: scale(1.1);
 }
