@@ -190,7 +190,7 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 25px 0 12px;
   height: 72px;
 }
 
@@ -209,7 +209,39 @@ input[type="submit"]:hover {
 }
 
 .card-resto svg {
-  /* margin: auto 0; */
+  display: block;
+  width: 23px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: auto;
+}
+
+.starting-heart {
+  stroke: black;
+  fill: none;
+}
+
+.growing-heart {
+  fill: none;
+  transform: scale(0.1);
+}
+
+@keyframes fill-gradient-anim {
+  to {
+    transform: scale(1);
+  }
+}
+
+.heart:hover .starting-heart {
+  stroke: url(#gradient);
+}
+
+/* fill the heart progressively from center */
+.heart:hover .growing-heart {
+  fill: url(#gradient);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fill-gradient-anim 0.2s linear 0s forwards;
 }
 
 .card-resto:hover {
