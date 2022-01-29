@@ -87,38 +87,112 @@
         <!--******************* RESTAURANT NAME *******************-->
         <div id="container-name">
           <h1>La palette du goût</h1>
-          <i class="fas fa-star full-star"></i>
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 15 15"
+            xml:space="preserve"
+            class="heart"
+          >
+            <defs>
+              <linearGradient
+                spreadMethod="pad"
+                id="gradient"
+                x1="0%"
+                y1="100%"
+                x2="0%"
+                y2="0%"
+              >
+                <stop
+                  offset="0"
+                  style="stop-color: rgb(255, 120, 217); stop-opacity: 1"
+                />
+                <stop
+                  offset="20%"
+                  style="stop-color: rgb(255, 121, 218); stop-opacity: 1"
+                />
+                <stop
+                  offset="80%"
+                  style="stop-color: rgb(147, 86, 220); stop-opacity: 1"
+                />
+                <stop
+                  offset="100"
+                  style="stop-color: rgb(147, 86, 220); stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+
+            <path
+              class="starting-heart"
+              d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
+            />
+
+            <!-- clippath -->
+            <clipPath id="mask">
+              <path
+                d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
+              />
+            </clipPath>
+
+            <g clip-path="url(#mask)">
+              <path
+                class="growing-heart"
+                d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
+              />
+            </g>
+          </svg>
         </div>
 
         <!--******************* MENU *******************-->
         <div id="container-menu-items">
           <section id="section-starter">
-            <h2>ENTRÉES</h2>
+            <h2><span>ENTR</span>ÉES</h2>
             <ul>
               <li>
                 <div class="menu-items">
-                  <h3>Fricassée d'escargot</h3>
-                  <div class="container-price">
-                    <p>Au piment d'Espelette</p>
-                    <p class="price">25€</p>
+                  <div class="menu-items-text">
+                    <h3>Fricassée d'escargot</h3>
+                    <div class="container-price">
+                      <p class="subheading">Au piment d'Espelette</p>
+                      <p class="price">25€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="menu-items">
-                  <h3>Foie gras de canard mi-cuit</h3>
-                  <div class="container-price">
-                    <p>Et ses copeaux de truffe noire</p>
-                    <p class="price">35€</p>
+                  <div class="menu-items-text">
+                    <h3>Foie gras de canard mi-cuit</h3>
+                    <div class="container-price">
+                      <p>Et ses copeaux de truffe noire</p>
+                      <p class="price">35€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="menu-items">
-                  <h3>Oeuf au plat</h3>
-                  <div class="container-price">
-                    <p>Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="price">20€</p>
+                  <div class="menu-items-text">
+                    <h3>Oeuf au plat</h3>
+                    <div class="container-price">
+                      <p class="subheading">
+                        Assaisonné à la truffe sur lit de caviar
+                      </p>
+                      <p class="price">20€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
@@ -126,32 +200,51 @@
           </section>
 
           <section id="section-maindish">
-            <h2>PLATS</h2>
+            <h2><span>PLAT</span>S</h2>
             <ul>
               <li>
                 <div class="menu-items">
-                  <h3>Filet de boeuf aux herbes</h3>
-                  <div class="container-price">
-                    <p>Accompagné de sa ribambelle de légumes</p>
-                    <p class="price">40€</p>
+                  <div class="menu-items-text">
+                    <h3>Filet de boeuf aux herbes</h3>
+                    <div class="container-price">
+                      <p class="subheading">
+                        Accompagné de sa ribambelle de légumes
+                      </p>
+                      <p class="price">40€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="menu-items">
-                  <h3>Parmentier de queue de boeuf</h3>
-                  <div class="container-price">
-                    <p>À la truffe noire sur sa purée de panais</p>
-                    <p class="price">35€</p>
+                  <div class="menu-items-text">
+                    <h3>Parmentier de queue de boeuf</h3>
+                    <div class="container-price">
+                      <p class="subheading">
+                        À la truffe noire sur sa purée de panais
+                      </p>
+                      <p class="price">35€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="menu-items">
-                  <h3>Filet de turbot</h3>
-                  <div class="container-price">
-                    <p>Aux agrumes</p>
-                    <p class="price">44€</p>
+                  <div class="menu-items-text">
+                    <h3>Filet de turbot</h3>
+                    <div class="container-price">
+                      <p class="subheading">Aux agrumes</p>
+                      <p class="price">44€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
@@ -159,32 +252,51 @@
           </section>
 
           <section id="section-dessert">
-            <h2>DESSERTS</h2>
+            <h2><span>DESS</span>ERTS</h2>
             <ul>
               <li>
                 <div class="menu-items">
-                  <h3>Paris-Brest</h3>
-                  <div class="container-price">
-                    <p>Revisité</p>
-                    <p class="price">18€</p>
+                  <div class="menu-items-text">
+                    <h3>Paris-Brest</h3>
+                    <div class="container-price">
+                      <p class="subheading">Revisité</p>
+                      <p class="price">18€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="menu-items">
-                  <h3>Macaron au chocolat d'exception</h3>
-                  <div class="container-price">
-                    <p>Et glace à la vanille de Madagascar</p>
-                    <p class="price">22€</p>
+                  <div class="menu-items-text">
+                    <h3>Macaron au chocolat d'exception</h3>
+                    <div class="container-price">
+                      <p class="subheading">
+                        Et glace à la vanille de Madagascar
+                      </p>
+                      <p class="price">22€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="menu-items">
-                  <h3>Mousse au chocolat</h3>
-                  <div class="container-price">
-                    <p>Au piment d'Espelette et à la truffe noire</p>
-                    <p class="price">23€</p>
+                  <div class="menu-items-text">
+                    <h3>Mousse au chocolat</h3>
+                    <div class="container-price">
+                      <p class="subheading">
+                        Au piment d'Espelette et à la truffe noire
+                      </p>
+                      <p class="price">23€</p>
+                    </div>
+                  </div>
+                  <div class="menu-items-check">
+                    <i class="fas fa-check-circle fa-lg"></i>
                   </div>
                 </div>
               </li>

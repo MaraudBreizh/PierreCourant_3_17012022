@@ -30,62 +30,162 @@ img {
 }
 
 /*********************************** RESTAURANT NAME ***********************************/
-#container-name h1 {
-  text-align: left;
-  margin: 15px 0 35px;
-  font-weight: 500;
-
-  position: relative;
+#container-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-#container-name i {
-  position: absolute;
-  top: 40px;
-  right: 20px;
+#container-name h1 {
+  margin: 20px 7px 10px;
+  font-weight: 500;
+}
+
+#container-name svg {
+  display: block;
+  width: 23px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.starting-heart {
+  stroke: black;
+  fill: none;
+}
+
+.growing-heart {
+  fill: none;
+  transform: scale(0.1);
+}
+
+@keyframes fill-gradient-anim {
+  to {
+    transform: scale(1);
+  }
+}
+
+.heart:hover .starting-heart {
+  stroke: url(#gradient);
+}
+
+/* fill the heart progressively from center */
+.heart:hover .growing-heart {
+  fill: url(#gradient);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fill-gradient-anim 0.2s linear 0s forwards;
 }
 
 /*********************************** MENU ***********************************/
-#container-menu h2 {
-  font-size: var(--h2MenuFontSize);
+#container-menu-items {
+  padding-top: 2px;
+}
+
+#container-menu-items h2 {
+  font-size: var(--h2Menu);
   font-weight: 300;
   padding-left: 7px;
 
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#container-menu-items h2 span {
+  padding-bottom: 4px;
+  border-bottom: 3px solid #99e2d0;
+}
+
+#container-menu-items ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+  margin-bottom: 30px;
 }
 
 .menu-items {
   width: 100%;
-  text-align: left;
   margin: 7px 0;
-  padding-left: 10px;
-  padding-right: 20px;
-
+  padding-left: 3%;
   background-color: white;
 
   border: none;
   border-radius: 15px;
 
+  display: flex;
+  justify-content: space-between;
+
   box-shadow: var(--cardShadow);
-  transition: all 0.3s ease;
+
+  overflow: hidden;
 }
 
-#container-menu h3 {
-  margin: 10px 0 2px;
+.menu-items .menu-items-text {
+  width: 100%;
+  overflow: hidden;
 }
 
-#container-menu p {
+.menu-items-text h3 {
+  font-size: var(--h3MenuItem);
+  margin: 11px 0 2px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu-items-text p {
   margin: 3px 0 12px;
-  font-size: var(--pMenuFontSize);
+  font-size: var(--pMenu);
   font-weight: 300;
 }
 
 .container-price {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
-#container-menu .price {
+.container-price .subheading {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container-price .price {
+  font-size: 1.02em;
   font-weight: 900;
+  margin-left: 3.8%;
+}
+
+.menu-items-check {
+  width: 25%;
+  margin-left: 7%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--tertiaryGreen);
+  color: white;
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  /* anim */
+  margin-right: -25%;
+  transition: all 0.4s;
+}
+
+.menu-items-check i {
+  transition: all 0.4s 0.08s;
+}
+
+/* ANIMATION */
+.menu-items:hover .menu-items-check {
+  margin-right: 0;
+}
+.menu-items:hover .menu-items-check i {
+  transform: rotate(1turn);
 }
 
 /*********************************** COMMAND ***********************************/
@@ -94,7 +194,7 @@ img {
 }
 
 #container-checkout-button button {
-  margin: 40px auto 35px;
+  margin: 10px auto 35px;
   padding: 17px 45px;
   border: none;
   border-radius: 25px;
@@ -115,7 +215,7 @@ img {
 
 #container-checkout-button button:hover {
   background: linear-gradient(
-    -170deg,
+    350deg,
     rgba(255, 121, 218, 1) 0%,
     rgba(147, 86, 220, 1) 85%
   );

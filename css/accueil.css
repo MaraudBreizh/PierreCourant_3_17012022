@@ -64,7 +64,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: linear-gradient(
-    -170deg,
+    350deg,
     rgba(255, 121, 218, 1) 0%,
     rgba(147, 86, 220, 1) 85%
   );
