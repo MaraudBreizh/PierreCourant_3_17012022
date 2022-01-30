@@ -1,3 +1,89 @@
+#loading-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(146, 86, 220, 0.65);
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: loading 1s 3s forwards;
+}
+
+.load {
+  width: 15vh;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.load__bar {
+  background-color: var(--tertiaryGreen);
+  height: 100%;
+  width: 1.5vh;
+}
+.load__bar-inv {
+  margin-top: -10px;
+  background-color: var(--tertiaryGreen);
+  height: 100%;
+  width: 1.5vh;
+}
+
+.load__bar:nth-child(1) {
+  animation: bars 1000ms 200ms backwards infinite ease-in-out alternate-reverse;
+}
+.load__bar:nth-child(2) {
+  animation: bars 1000ms 400ms backwards infinite ease-in-out alternate-reverse;
+}
+.load__bar:nth-child(3) {
+  animation: bars 1000ms 600ms backwards infinite ease-in-out alternate-reverse;
+}
+.load__bar:nth-child(4) {
+  animation: bars 1000ms 800ms backwards infinite ease-in-out alternate-reverse;
+}
+.load__bar:nth-child(5) {
+  animation: bars 1000ms 1000ms backwards infinite ease-in-out alternate-reverse;
+}
+
+/* inverse */
+.load__bar-inv:nth-child(1) {
+  animation: bars 1000ms 200ms backwards infinite ease-in-out alternate;
+}
+.load__bar-inv:nth-child(2) {
+  animation: bars 1000ms 400ms backwards infinite ease-in-out alternate;
+}
+.load__bar-inv:nth-child(3) {
+  animation: bars 1000ms 600ms backwards infinite ease-in-out alternate;
+}
+.load__bar-inv:nth-child(4) {
+  animation: bars 1000ms 800ms backwards infinite ease-in-out alternate;
+}
+.load__bar-inv:nth-child(5) {
+  animation: bars 1000ms 1000ms backwards infinite ease-in-out alternate;
+}
+
+@keyframes bars {
+  from {
+    transform: scaleY(0.5);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes loading {
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
 /************************************** SEARCH SECTION **************************************/
 #section-search {
   background-color: var(--lightGrey);
