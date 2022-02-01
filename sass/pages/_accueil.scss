@@ -159,68 +159,68 @@
 }
 
 /************************************** FUNCTIONING SECTION **************************************/
-#section-functioning {
+.funct-section {
   padding: 38px 5.3vw 57.5px;
-}
 
-#section-functioning h2 {
-  margin-top: 10px;
-  margin-bottom: 18px;
-}
+  & h2 {
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
 
-.button-functioning {
-  width: calc(100% - 12.5px);
-  margin: 13.5px 0;
-  padding: 25px 0;
-  border-radius: 20px;
-  font-weight: 600;
-  border: none;
-  background-color: var(--lightGrey);
+  &__item {
+    width: calc(100% - 12.5px);
+    margin: 13.5px 0;
+    padding: 25px 0;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    background-color: var(--lightGrey);
 
-  box-shadow: var(--buttonShadow);
+    box-shadow: var(--buttonShadow);
 
-  position: relative;
-  left: 12.5px;
+    position: relative;
+    left: 12.5px;
 
-  text-align: left;
+    text-align: left;
 
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+    transition: all 0.3s ease;
+    cursor: pointer;
 
-.number-functioning {
-  background-color: var(--primaryPurple);
-  color: white;
-  border-radius: 50%;
+    & .number {
+      background-color: $primaryColor;
+      color: white;
+      border-radius: 50%;
 
-  font-weight: 400;
-  font-size: 13px;
-  padding-top: 2px;
+      font-weight: 400;
+      font-size: 13px;
+      padding-top: 2px;
 
-  position: absolute;
-  left: -12.5px;
-  top: 22.5px;
+      position: absolute;
+      left: -12.5px;
+      top: 22.5px;
 
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.button-functioning i {
-  margin-left: 8vw;
-  margin-right: 5vw;
+    & i {
+      margin-left: 8vw;
+      margin-right: 5vw;
 
-  color: var(--darkestGrey);
-}
+      color: var(--darkestGrey);
+    }
 
-.button-functioning:hover {
-  background-color: rgba(147, 86, 220, 0.15);
-}
+    &:hover {
+      background-color: rgba(147, 86, 220, 0.15);
 
-.button-functioning:hover i {
-  color: var(--primaryPurple);
+      & i {
+        color: $primaryColor;
+      }
+    }
+  }
 }
 
 /************************************** RESTAURANTS SECTION **************************************/
