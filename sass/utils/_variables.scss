@@ -1,0 +1,43 @@
+//colors
+$primaryColor: #9356dc;
+$secondaryColor: #ff79da;
+$tertiaryColor: #99e2d0;
+
+$accueilFontSize: (
+  "h1": 1.65em,
+  "h2": 1.55em,
+  "h3": 18px,
+  "p": 1.1em,
+);
+
+$h2Menu: 1em;
+$h3MenuItem: 1.1em;
+
+/* Variables */
+/* selector ":root" is identical to the selector html, except that its specificity is higher.*/
+:root {
+  /* fontsize */
+  --h1FontSize: 1.65em;
+  --h2FontSize: 1.55em;
+  --h2Menu: 1em;
+  --h3RestoCard: 18px;
+  --h3MenuItem: 1.1em;
+  --pFontSize: 1.1em;
+  --pRestoCard: 17px;
+  --pMenu: 0.9em;
+
+  /* color */
+  --primaryPurple: #9356dc;
+  --secondaryRose: #ff79da;
+  --tertiaryGreen: #99e2d0;
+  --tertiaryGreenDark: #008766;
+  --lightGrey: #f6f6f6;
+  --darkerGrey: #eaeaea;
+  --darkestGrey: #7e7e7e;
+
+  /* shadow */
+  --buttonShadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  --buttonDarker: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+  --cardShadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  --cardShadowPurple: 0 0 10px 2px #9356dc;
+}
