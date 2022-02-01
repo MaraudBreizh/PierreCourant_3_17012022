@@ -83,14 +83,15 @@
     </header>
     <main>
       <!--******************* SEARCH AND EXPLORE *******************-->
-      <section id="section-search">
+      <section class="search-section">
         <form action="index.html" method="get">
           <!-- SEARCH LOCATION -->
-          <div id="container-search">
-            <label id="icon-search" for="place">
+          <div class="search-form">
+            <label class="search-form__icon" for="place">
               <i class="fas fa-map-marker-alt"></i>
             </label>
             <input
+              class="search-form__input"
               type="text"
               name="place"
               id="place"
@@ -99,12 +100,16 @@
             />
           </div>
           <!-- EXPLORE -->
-          <div id="container-explore">
+          <div class="explore-form">
             <h2>Réservez le menu qui vous convient</h2>
             <p>
               Découvrez des restaurants d'exception, sélectionnés par nos soins.
             </p>
-            <input type="submit" value="Explorer nos restaurants" />
+            <input
+              class="explore-form__input"
+              type="submit"
+              value="Explorer nos restaurants"
+            />
           </div>
         </form>
       </section>

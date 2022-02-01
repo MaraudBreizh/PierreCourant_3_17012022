@@ -15,10 +15,10 @@ h1 {
 }
 
 h2 {
-  font-size: map-get($accueilFontSize, "h1");
+  font-size: map-get($accueilFontSize, "h2");
   font-weight: 900;
 }
 
 p {
-  font-size: map-get($accueilFontSize, "h1");
+  font-size: map-get($accueilFontSize, "p");
 }
