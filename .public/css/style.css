@@ -596,23 +596,21 @@ footer i {
 }
 
 /************************************** FUNCTIONING SECTION **************************************/
-#section-functioning {
+.funct-section {
   padding: 38px 5.3vw 57.5px;
 }
-
-#section-functioning h2 {
+.funct-section h2 {
   margin-top: 10px;
   margin-bottom: 18px;
 }
-
-.button-functioning {
+.funct-section__item {
   width: calc(100% - 12.5px);
   margin: 13.5px 0;
   padding: 25px 0;
   border-radius: 20px;
   font-weight: 600;
   border: none;
-  background-color: var(--lightGrey);
+  background-color: var(#f6f6f6);
   box-shadow: var(--buttonShadow);
   position: relative;
   left: 12.5px;
@@ -620,9 +618,8 @@ footer i {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-
-.number-functioning {
-  background-color: var(--primaryPurple);
+.funct-section__item .number {
+  background-color: #9356dc;
   color: white;
   border-radius: 50%;
   font-weight: 400;
@@ -637,19 +634,16 @@ footer i {
   justify-content: center;
   align-items: center;
 }
-
-.button-functioning i {
+.funct-section__item i {
   margin-left: 8vw;
   margin-right: 5vw;
-  color: var(--darkestGrey);
+  color: #7e7e7e;
 }
-
-.button-functioning:hover {
+.funct-section__item:hover {
   background-color: rgba(147, 86, 220, 0.15);
 }
-
-.button-functioning:hover i {
-  color: var(--primaryPurple);
+.funct-section__item:hover i {
+  color: #9356dc;
 }
 
 /************************************** RESTAURANTS SECTION **************************************/
