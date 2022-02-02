@@ -94,7 +94,7 @@
 /************************************** MAIN **************************************/
 
 @include desktop-layout {
-  main {
+  .main_accueil {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
