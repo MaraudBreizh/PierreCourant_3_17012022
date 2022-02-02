@@ -1,3 +1,20 @@
+$breakpoints: (
+  tablet: 768px,
+  desktop: 992px,
+);
+
+@mixin tablet-layout {
+  @media all and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-layout {
+  @media all and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
 //colors
 $primaryColor: #9356dc;
 $secondaryColor: #ff79da;

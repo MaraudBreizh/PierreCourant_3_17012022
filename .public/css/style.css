@@ -588,6 +588,13 @@ footer i {
 .funct-section {
   padding: 38px 5.3vw 57.5px;
 }
+@media all and (min-width: 768px) {
+  .funct-section ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+}
 .funct-section h2 {
   margin-top: 10px;
   margin-bottom: 18px;
@@ -607,6 +614,14 @@ footer i {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+@media all and (min-width: 768px) {
+  .funct-section__item {
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
 .funct-section__item .number {
   background-color: #9356dc;
   color: white;
@@ -623,10 +638,25 @@ footer i {
   justify-content: center;
   align-items: center;
 }
+@media all and (min-width: 768px) {
+  .funct-section__item .number {
+    position: relative;
+    min-width: 25px;
+    left: -12.5px;
+    top: 0;
+  }
+}
 .funct-section__item i {
   margin-left: 8vw;
   margin-right: 5vw;
   color: #7e7e7e;
+}
+@media all and (min-width: 768px) {
+  .funct-section__item i {
+    margin-left: 7.5px;
+    margin-right: 20px;
+    display: block;
+  }
 }
 .funct-section__item:hover {
   background-color: rgba(147, 86, 220, 0.15);
@@ -640,10 +670,30 @@ footer i {
   background-color: #f6f6f6;
   padding: 30px 5.3vw 65px;
 }
+@media all and (min-width: 768px) {
+  .resto-section {
+    border-radius: 40px;
+    margin-bottom: 70px;
+  }
+  .resto-section h2 {
+    margin-bottom: 50px;
+  }
+}
 .resto-section ul {
   display: flex;
   flex-flow: column wrap;
   row-gap: 5vw;
+}
+@media all and (min-width: 768px) {
+  .resto-section ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 2.5vw;
+  }
+  .resto-section ul li {
+    width: 48.5%;
+  }
 }
 
 .card {
@@ -654,12 +704,24 @@ footer i {
   box-shadow: var(--cardShadow);
   transition: all 0.3s ease;
 }
+@media all and (min-width: 768px) {
+  .card {
+    border-radius: 25px;
+  }
+}
 .card__img {
   height: 46vw;
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+@media all and (min-width: 768px) {
+  .card__img {
+    height: 23vw;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
 }
 .card__new {
   margin: 0;
@@ -674,6 +736,12 @@ footer i {
   box-shadow: var(--cardShadow);
   font-size: 14px;
   font-weight: 600;
+}
+@media all and (min-width: 768px) {
+  .card__new {
+    top: 2vw;
+    right: 2vw;
+  }
 }
 .card__body {
   display: flex;
