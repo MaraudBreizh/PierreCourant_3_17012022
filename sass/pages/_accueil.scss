@@ -1,3 +1,4 @@
+/************************************** ANIMATION **************************************/
 @keyframes bars {
   from {
     transform: scaleY(0.5);
@@ -48,6 +49,8 @@
   }
 }
 
+/************************************** LOADING ANIM **************************************/
+
 .loading-container {
   position: fixed;
   top: 0;
@@ -88,10 +91,25 @@
   }
 }
 
+/************************************** MAIN **************************************/
+
+@include desktop-layout {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 70px;
+  }
+}
+
 /************************************** SEARCH SECTION **************************************/
 .search-section {
   background-color: $backgroundLight;
   text-align: center;
+
+  @include desktop-layout {
+    width: 100%;
+  }
 }
 
 .search-form {
@@ -166,17 +184,27 @@
 .funct-section {
   padding: 38px 5.3vw 57.5px;
 
-  @include tablet-layout {
-    & ul {
+  @include desktop-layout {
+    width: 30%;
+  }
+
+  & ul {
+    @include tablet-layout {
       display: flex;
       justify-content: space-between;
       gap: 2em;
+    }
+    @include desktop-layout {
+      flex-direction: column;
     }
   }
 
   & h2 {
     margin-top: 10px;
     margin-bottom: 18px;
+    @include desktop-layout {
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -270,6 +298,14 @@
     }
   }
 
+  @include desktop-layout {
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
   & ul {
     display: flex;
     flex-flow: column wrap;
@@ -284,6 +320,9 @@
       & li {
         width: 48.5%;
       }
+    }
+    @include desktop-layout {
+      row-gap: 1.5vw;
     }
   }
 }
@@ -317,6 +356,9 @@
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
     }
+    @include desktop-layout {
+      height: 15vw;
+    }
   }
 
   &__new {
@@ -328,6 +370,10 @@
     @include tablet-layout {
       top: 2vw;
       right: 2vw;
+    }
+    @include desktop-layout {
+      top: 1.5vw;
+      right: 1.5vw;
     }
 
     background-color: var(--tertiaryGreen);
