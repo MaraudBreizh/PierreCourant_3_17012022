@@ -450,82 +450,6 @@ footer i {
   padding-right: 10px;
 }
 
-#loading-container {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(146, 86, 220, 0.65);
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: loading 0.5s 2.5s forwards;
-}
-
-.load {
-  width: 15vh;
-  height: 10vh;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.load__bar {
-  background-color: var(--tertiaryGreen);
-  height: 100%;
-  width: 1.5vh;
-}
-
-.load__bar-inv {
-  margin-top: -10px;
-  background-color: var(--tertiaryGreen);
-  height: 100%;
-  width: 1.5vh;
-}
-
-.load__bar:nth-child(1) {
-  animation: bars 1000ms 200ms backwards infinite ease-in-out alternate-reverse;
-}
-
-.load__bar:nth-child(2) {
-  animation: bars 1000ms 400ms backwards infinite ease-in-out alternate-reverse;
-}
-
-.load__bar:nth-child(3) {
-  animation: bars 1000ms 600ms backwards infinite ease-in-out alternate-reverse;
-}
-
-.load__bar:nth-child(4) {
-  animation: bars 1000ms 800ms backwards infinite ease-in-out alternate-reverse;
-}
-
-.load__bar:nth-child(5) {
-  animation: bars 1000ms 1000ms backwards infinite ease-in-out alternate-reverse;
-}
-
-/* inverse */
-.load__bar-inv:nth-child(1) {
-  animation: bars 1000ms 200ms backwards infinite ease-in-out alternate;
-}
-
-.load__bar-inv:nth-child(2) {
-  animation: bars 1000ms 400ms backwards infinite ease-in-out alternate;
-}
-
-.load__bar-inv:nth-child(3) {
-  animation: bars 1000ms 600ms backwards infinite ease-in-out alternate;
-}
-
-.load__bar-inv:nth-child(4) {
-  animation: bars 1000ms 800ms backwards infinite ease-in-out alternate;
-}
-
-.load__bar-inv:nth-child(5) {
-  animation: bars 1000ms 1000ms backwards infinite ease-in-out alternate;
-}
-
 @keyframes bars {
   from {
     transform: scaleY(0.5);
@@ -540,14 +464,79 @@ footer i {
     z-index: -1;
   }
 }
+@keyframes fill-gradient-anim {
+  to {
+    transform: scale(1);
+  }
+}
+.loading-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(146, 86, 220, 0.65);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: loading 0.5s 2.5s forwards;
+}
+
+.loadbars-container {
+  width: 15vh;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.loadbars-container__bar {
+  background-color: #99e2d0;
+  height: 100%;
+  width: 1.5vh;
+}
+.loadbars-container__bar--norm:nth-child(1) {
+  animation: bars 1s 0.2s backwards infinite ease-in-out alternate;
+}
+.loadbars-container__bar--norm:nth-child(2) {
+  animation: bars 1s 0.4s backwards infinite ease-in-out alternate;
+}
+.loadbars-container__bar--norm:nth-child(3) {
+  animation: bars 1s 0.6s backwards infinite ease-in-out alternate;
+}
+.loadbars-container__bar--norm:nth-child(4) {
+  animation: bars 1s 0.8s backwards infinite ease-in-out alternate;
+}
+.loadbars-container__bar--norm:nth-child(5) {
+  animation: bars 1s 1s backwards infinite ease-in-out alternate;
+}
+.loadbars-container__bar--inv {
+  margin-top: -10px;
+}
+.loadbars-container__bar--inv:nth-child(1) {
+  animation: bars 1s 0.2s backwards infinite ease-in-out alternate-reverse;
+}
+.loadbars-container__bar--inv:nth-child(2) {
+  animation: bars 1s 0.4s backwards infinite ease-in-out alternate-reverse;
+}
+.loadbars-container__bar--inv:nth-child(3) {
+  animation: bars 1s 0.6s backwards infinite ease-in-out alternate-reverse;
+}
+.loadbars-container__bar--inv:nth-child(4) {
+  animation: bars 1s 0.8s backwards infinite ease-in-out alternate-reverse;
+}
+.loadbars-container__bar--inv:nth-child(5) {
+  animation: bars 1s 1s backwards infinite ease-in-out alternate-reverse;
+}
+
 /************************************** SEARCH SECTION **************************************/
 .search-section {
-  background-color: var(--lightGrey);
+  background-color: #f6f6f6;
   text-align: center;
 }
 
 .search-form {
-  background-color: var(--darkerGrey);
+  background-color: #eaeaea;
   padding: 15px 0;
   box-shadow: 0px 10px 5px -10px rgba(0, 0, 0, 0.35) inset;
 }
@@ -647,18 +636,17 @@ footer i {
 }
 
 /************************************** RESTAURANTS SECTION **************************************/
-#section-resto {
-  background-color: var(--lightGrey);
+.resto-section {
+  background-color: #f6f6f6;
   padding: 30px 5.3vw 65px;
 }
-
-#section-resto ul {
+.resto-section ul {
   display: flex;
   flex-flow: column wrap;
   row-gap: 5vw;
 }
 
-.card-resto {
+.card {
   display: block;
   border-radius: 15px;
   background-color: white;
@@ -666,16 +654,14 @@ footer i {
   box-shadow: var(--cardShadow);
   transition: all 0.3s ease;
 }
-
-.card-resto img {
+.card__img {
   height: 46vw;
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
-.new {
+.card__new {
   margin: 0;
   /* reset normalize.css */
   position: absolute;
@@ -689,65 +675,50 @@ footer i {
   font-size: 14px;
   font-weight: 600;
 }
-
-.card-resto-body {
+.card__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 25px 0 12px;
   height: 72px;
 }
-
-.card-resto-body h3 {
+.card__body h3 {
   margin-top: 0;
   margin-bottom: 3px;
   font-weight: 800;
   font-size: var(--h3RestoCard);
 }
-
-.card-resto-body p {
+.card__body p {
   margin-top: 4px;
   margin-bottom: 0;
   font-weight: 300;
   font-size: var(--pRestoCard);
 }
-
-.card-resto svg {
+.card__body__heart {
   display: block;
   width: 23px;
   height: auto;
   margin-top: 20px;
   margin-bottom: auto;
 }
-
-.starting-heart {
+.card__body__heart--empty {
   stroke: black;
   fill: none;
 }
-
-.growing-heart {
+.card__body__heart--full {
   fill: none;
   transform: scale(0.1);
 }
-
-@keyframes fill-gradient-anim {
-  to {
-    transform: scale(1);
-  }
-}
-.heart:hover .starting-heart {
+.card__body__heart:hover .card__body__heart--empty {
   stroke: url(#gradient);
 }
-
-/* fill the heart progressively from center */
-.heart:hover .growing-heart {
+.card__body__heart:hover .card__body__heart--full {
   fill: url(#gradient);
   transform-box: fill-box;
   transform-origin: center;
   animation: fill-gradient-anim 0.2s linear 0s forwards;
 }
-
-.card-resto:hover {
+.card:hover {
   transform: scale(1.04);
   box-shadow: var(--cardShadowPurple);
 }
