@@ -3,68 +3,40 @@ $breakpoints: (
   desktop: 992px,
 );
 
-@mixin tablet-layout {
-  @media all and (min-width: map-get($breakpoints, tablet)) {
-    @content;
-  }
-}
+//colors
+$primaryColor: #9356dc;
+$secondaryColor: #ff79da;
+$tertiaryColor: #99e2d0;
+$tertiaryGreenDark: #008766;
+$backgroundLight: #f6f6f6;
+$backgroundDark: #eaeaea;
+$background: white;
 
-@mixin desktop-layout {
-  @media all and (min-width: map-get($breakpoints, desktop)) {
-    @content;
-  }
-}
+//ACCUEIL icon color
+$funtIconBackground: #7e7e7e;
 
+$accueilFontSize: (
+  "h1": 1.65em,
+  "h2": 1.55em,
+  "h3": 1.13em,
+  "p": 1.1em,
+  "pCard": 1.05em,
+);
+
+$menuFontSize: (
+  "h2": 1em,
+  "h3": 1.1em,
+  "p": 0.9em,
+);
+
+//SHADOW OPACITY
+$lightShadow: 0.1;
+$darkShadow: 0.3;
+$fullShadow: 1;
+
+//ANIMATION DELAY FOR ITEM APPEARANCE IN MENU
 $animate-item-maps: (
   "starter": 0,
   "maindish": 1,
   "dessert": 2,
 );
-
-//colors
-$primaryColor: #9356dc;
-$secondaryColor: #ff79da;
-$tertiaryColor: #99e2d0;
-$funtItemBackground: #f6f6f6;
-$funtIconBackground: #7e7e7e;
-$backgroundLight: #f6f6f6;
-$backgroundDark: #eaeaea;
-
-$accueilFontSize: (
-  "h1": 1.65em,
-  "h2": 1.55em,
-  "h3": 18px,
-  "p": 1.1em,
-);
-
-$h2Menu: 1em;
-$h3MenuItem: 1.1em;
-
-/* Variables */
-/* selector ":root" is identical to the selector html, except that its specificity is higher.*/
-:root {
-  /* fontsize */
-  --h1FontSize: 1.65em;
-  --h2FontSize: 1.55em;
-  --h2Menu: 1em;
-  --h3RestoCard: 18px;
-  --h3MenuItem: 1.1em;
-  --pFontSize: 1.1em;
-  --pRestoCard: 17px;
-  --pMenu: 0.9em;
-
-  /* color */
-  --primaryPurple: #9356dc;
-  --secondaryRose: #ff79da;
-  --tertiaryGreen: #99e2d0;
-  --tertiaryGreenDark: #008766;
-  --lightGrey: #f6f6f6;
-  --darkerGrey: #eaeaea;
-  --darkestGrey: #7e7e7e;
-
-  /* shadow */
-  --buttonShadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-  --buttonDarker: 0 0 10px 2px rgba(0, 0, 0, 0.3);
-  --cardShadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-  --cardShadowPurple: 0 0 10px 2px #9356dc;
-}

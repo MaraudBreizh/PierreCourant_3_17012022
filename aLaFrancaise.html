@@ -15,7 +15,7 @@
 
     <!-- intégration des feuilles de style internes -->
     <link rel="stylesheet" href="public/css/style.css" />
-   
+
     <title>OMF - À la française</title>
 
     <!-- Fav-icon -->
@@ -60,13 +60,12 @@
         <div class="restaurant-container__name">
           <h1>À la française</h1>
           <svg
-            class="restaurant-container__favorite"
+            class="restaurant-container__favorite heart"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 15 15"
             xml:space="preserve"
-            class="heart"
           >
             <defs>
               <linearGradient
@@ -97,7 +96,7 @@
             </defs>
 
             <path
-              class="restaurant-container__favorite--emptyHeart"
+              class="heart--empty"
               d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
 	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
             />
@@ -112,7 +111,7 @@
 
             <g clip-path="url(#mask)">
               <path
-                class="restaurant-container__favorite--fullHeart"
+                class="heart--growing"
                 d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
 	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
               />
@@ -131,7 +130,7 @@
                     <h3>Tartare de poulpe acidulé</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Aux zestes d'orange
+                        Aux zestes d'orange
                       </p>
                       <p class="item__subBody__price">25€</p>
                     </div>
@@ -147,7 +146,7 @@
                     <h3>Velouté de légumes d'antan</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Carotte, panais, topinambour
+                        Carotte, panais, topinambour
                       </p>
                       <p class="item__subBody__price">35€</p>
                     </div>
@@ -162,9 +161,7 @@
                   <div class="item__body">
                     <h3>Soupe à l'oignon</h3>
                     <div class="item__subBody">
-                      <p class="item__subBody__description">
-                      Revisitée
-                      </p>
+                      <p class="item__subBody__description">Revisitée</p>
                       <p class="item__subBody__price">20€</p>
                     </div>
                   </div>
@@ -201,7 +198,7 @@
                     <h3>Magret de canard</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Et parmentier de pommes de terre
+                        Et parmentier de pommes de terre
                       </p>
                       <p class="item__subBody__price">35€</p>
                     </div>
@@ -238,7 +235,9 @@
                   <div class="item__body">
                     <h3>Pétales de violettes glacés</h3>
                     <div class="item__subBody">
-                      <p class="item__subBody__description">Et purée de noisettes</p>
+                      <p class="item__subBody__description">
+                        Et purée de noisettes
+                      </p>
                       <p class="item__subBody__price">18€</p>
                     </div>
                   </div>
@@ -252,9 +251,7 @@
                   <div class="item__body">
                     <h3>Fondant au chocolat</h3>
                     <div class="item__subBody">
-                      <p class="item__subBody__description">
-                      Revisité
-                      </p>
+                      <p class="item__subBody__description">Revisité</p>
                       <p class="item__subBody__price">22€</p>
                     </div>
                   </div>
@@ -269,7 +266,7 @@
                     <h3>Millefeuille croustillant</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Myrtilles et pâte d’amande
+                        Myrtilles et pâte d’amande
                       </p>
                       <p class="item__subBody__price">23€</p>
                     </div>
@@ -285,7 +282,7 @@
 
         <!-- COMMAND -->
         <div class="checkout-container">
-          <button class="checkout-container__button">Commander</button>
+          <button class="checkout-container__button btn-cta">Commander</button>
         </div>
       </div>
     </main>

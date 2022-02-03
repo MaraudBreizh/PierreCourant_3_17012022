@@ -1,0 +1,23 @@
+@mixin tablet-layout {
+  @media all and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-layout {
+  @media all and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin shadow($opacity: $lightShadow, $color: #000000) {
+  box-shadow: 0 0 10px 2px opacify(rgba($color, 0), $opacity);
+}
+
+@mixin buttonGradient($hover: "false") {
+  @if "false" == $hover {
+    background: linear-gradient(170deg, $secondaryColor 0%, $primaryColor 85%);
+  } @else {
+    background: linear-gradient(350deg, $secondaryColor 0%, $primaryColor 85%);
+  }
+}
