@@ -1,0 +1,266 @@
+/************************************** ANIM **************************************/
+@keyframes fill-gradient-anim {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes item-appearance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/************************************** MAIN **************************************/
+.main-menu {
+  &__img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+  }
+}
+
+/************************************** RESTAURANT **************************************/
+.restaurant-container {
+  background-color: var(--lightGrey);
+  padding: 20px 5vw;
+
+  position: relative;
+  top: -58px;
+  margin-bottom: -58px;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  @include tablet-layout {
+    margin: 3vw 10vw -3vw;
+    top: -80px;
+    border-radius: 40px;
+  }
+  @include desktop-layout {
+    max-width: 1220px;
+    margin: 3vw auto -3vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & h1 {
+      margin: 20px 7px 10px;
+      font-weight: 500;
+
+      @include desktop-layout {
+        margin-left: 2vw;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__favorite {
+    display: block;
+    width: 23px;
+    height: auto;
+    margin-right: 20px;
+
+    &--emptyHeart {
+      stroke: black;
+      fill: none;
+    }
+
+    &--fullHeart {
+      fill: none;
+      transform: scale(0.1);
+    }
+
+    &:hover &--emptyHeart {
+      stroke: url(#gradient);
+    }
+
+    /* fill the heart progressively from center */
+    &:hover &--fullHeart {
+      fill: url(#gradient);
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: fill-gradient-anim 0.2s linear 0s forwards;
+    }
+  }
+}
+
+/*********************************** FORMULA ***********************************/
+.formula-container {
+  padding-top: 2px;
+
+  @include desktop-layout {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2vw;
+  }
+
+  & h2 {
+    font-size: var(--h2Menu);
+    font-weight: 300;
+    padding-left: 7px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include desktop-layout {
+      font-size: 1.2em;
+    }
+
+    & span {
+      padding-bottom: 4px;
+      border-bottom: 3px solid #99e2d0;
+    }
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+    margin-bottom: 30px;
+  }
+}
+
+.item {
+  width: 100%;
+  margin: 7px 0;
+  padding-left: 3%;
+  background-color: white;
+
+  border: none;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: var(--cardShadow);
+
+  overflow: hidden;
+
+  &__body {
+    width: 100%;
+    overflow: hidden;
+
+    & h3 {
+      font-size: var(--h3MenuItem);
+      margin: 11px 0 2px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__subBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &__description,
+    &__price {
+      margin: 3px 0 12px;
+    }
+
+    &__description {
+      font-size: var(--pMenu);
+      font-weight: 300;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__price {
+      font-size: 1.02em;
+      font-weight: 900;
+      margin-left: 3.8%;
+    }
+  }
+
+  &__check {
+    width: 25%;
+    margin-left: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--tertiaryGreen);
+    color: white;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    /* anim */
+    margin-right: -25%;
+    transition: all 0.4s;
+
+    & i {
+      transition: all 0.4s 0.08s;
+    }
+  }
+
+  &:hover &__check {
+    margin-right: 0;
+
+    & i {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@mixin animate-items($maps: $animate-item-maps) {
+  @each $name, $offset in $maps {
+    @for $i from 1 through 4 {
+      & .#{$name}-section li:nth-child(#{$i}) {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: item-appearance 3s #{$i * 0.2 - 0.2 + $offset}s forwards;
+      }
+    }
+  }
+}
+
+.formula-container {
+  @include animate-items;
+}
+
+/*********************************** COMMAND ***********************************/
+.checkout-container {
+  text-align: center;
+
+  &__button {
+    margin: 10px auto 35px;
+    padding: 17px 45px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+
+    background: rgb(255, 121, 218);
+    background: linear-gradient(
+      170deg,
+      rgba(255, 121, 218, 1) 0%,
+      rgba(147, 86, 220, 1) 85%
+    );
+
+    box-shadow: var(--buttonDarker);
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover {
+      background: linear-gradient(
+        350deg,
+        rgba(255, 121, 218, 1) 0%,
+        rgba(147, 86, 220, 1) 85%
+      );
+
+      transform: scale(1.1);
+    }
+  }
+}

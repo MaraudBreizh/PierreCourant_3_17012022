@@ -866,4 +866,271 @@ footer i {
   box-shadow: var(--cardShadowPurple);
 }
 
+/************************************** ANIM **************************************/
+@keyframes fill-gradient-anim {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes item-appearance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/************************************** MAIN **************************************/
+.main-menu__img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+/************************************** RESTAURANT **************************************/
+.restaurant-container {
+  background-color: var(--lightGrey);
+  padding: 20px 5vw;
+  position: relative;
+  top: -58px;
+  margin-bottom: -58px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+@media all and (min-width: 768px) {
+  .restaurant-container {
+    margin: 3vw 10vw -3vw;
+    top: -80px;
+    border-radius: 40px;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurant-container {
+    max-width: 1220px;
+    margin: 3vw auto -3vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+.restaurant-container__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.restaurant-container__name h1 {
+  margin: 20px 7px 10px;
+  font-weight: 500;
+}
+@media all and (min-width: 992px) {
+  .restaurant-container__name h1 {
+    margin-left: 2vw;
+    margin-bottom: 20px;
+  }
+}
+.restaurant-container__favorite {
+  display: block;
+  width: 23px;
+  height: auto;
+  margin-right: 20px;
+  /* fill the heart progressively from center */
+}
+.restaurant-container__favorite--emptyHeart {
+  stroke: black;
+  fill: none;
+}
+.restaurant-container__favorite--fullHeart {
+  fill: none;
+  transform: scale(0.1);
+}
+.restaurant-container__favorite:hover .restaurant-container__favorite--emptyHeart {
+  stroke: url(#gradient);
+}
+.restaurant-container__favorite:hover .restaurant-container__favorite--fullHeart {
+  fill: url(#gradient);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fill-gradient-anim 0.2s linear 0s forwards;
+}
+
+/*********************************** FORMULA ***********************************/
+.formula-container {
+  padding-top: 2px;
+}
+@media all and (min-width: 992px) {
+  .formula-container {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2vw;
+  }
+}
+.formula-container h2 {
+  font-size: var(--h2Menu);
+  font-weight: 300;
+  padding-left: 7px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media all and (min-width: 992px) {
+  .formula-container h2 {
+    font-size: 1.2em;
+  }
+}
+.formula-container h2 span {
+  padding-bottom: 4px;
+  border-bottom: 3px solid #99e2d0;
+}
+.formula-container ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+  margin-bottom: 30px;
+}
+
+.item {
+  width: 100%;
+  margin: 7px 0;
+  padding-left: 3%;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: var(--cardShadow);
+  overflow: hidden;
+}
+.item__body {
+  width: 100%;
+  overflow: hidden;
+}
+.item__body h3 {
+  font-size: var(--h3MenuItem);
+  margin: 11px 0 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item__subBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.item__subBody__description, .item__subBody__price {
+  margin: 3px 0 12px;
+}
+.item__subBody__description {
+  font-size: var(--pMenu);
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item__subBody__price {
+  font-size: 1.02em;
+  font-weight: 900;
+  margin-left: 3.8%;
+}
+.item__check {
+  width: 25%;
+  margin-left: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiaryGreen);
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  /* anim */
+  margin-right: -25%;
+  transition: all 0.4s;
+}
+.item__check i {
+  transition: all 0.4s 0.08s;
+}
+.item:hover .item__check {
+  margin-right: 0;
+}
+.item:hover .item__check i {
+  transform: rotate(1turn);
+}
+
+.formula-container .starter-section li:nth-child(1) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 0s forwards;
+}
+.formula-container .starter-section li:nth-child(2) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 0.2s forwards;
+}
+.formula-container .starter-section li:nth-child(3) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 0.4s forwards;
+}
+.formula-container .starter-section li:nth-child(4) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 0.6s forwards;
+}
+.formula-container .maindish-section li:nth-child(1) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 1s forwards;
+}
+.formula-container .maindish-section li:nth-child(2) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 1.2s forwards;
+}
+.formula-container .maindish-section li:nth-child(3) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 1.4s forwards;
+}
+.formula-container .maindish-section li:nth-child(4) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 1.6s forwards;
+}
+.formula-container .dessert-section li:nth-child(1) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 2s forwards;
+}
+.formula-container .dessert-section li:nth-child(2) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 2.2s forwards;
+}
+.formula-container .dessert-section li:nth-child(3) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 2.4s forwards;
+}
+.formula-container .dessert-section li:nth-child(4) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: item-appearance 3s 2.6s forwards;
+}
+
+/*********************************** COMMAND ***********************************/
+.checkout-container {
+  text-align: center;
+}
+.checkout-container__button {
+  margin: 10px auto 35px;
+  padding: 17px 45px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background: #ff79da;
+  background: linear-gradient(170deg, #ff79da 0%, #9356dc 85%);
+  box-shadow: var(--buttonDarker);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.checkout-container__button:hover {
+  background: linear-gradient(350deg, #ff79da 0%, #9356dc 85%);
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=style.css.map */

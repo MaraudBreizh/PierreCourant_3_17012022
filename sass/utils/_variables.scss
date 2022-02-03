@@ -15,6 +15,12 @@ $breakpoints: (
   }
 }
 
+$animate-item-maps: (
+  "starter": 0,
+  "maindish": 1,
+  "dessert": 2,
+);
+
 //colors
 $primaryColor: #9356dc;
 $secondaryColor: #ff79da;

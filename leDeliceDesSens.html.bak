@@ -212,14 +212,12 @@
                 </div>
               </li>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Côte de boeuf Angus</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">
-                      Et sa purée de panais
-                      </p>
-                      <p class="item__subBody__price">44€</p>
+                    <div class="container-price">
+                      <p class="subheading">Et sa purée de panais</p>
+                      <p class="price">44€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -234,12 +232,12 @@
             <h2><span>DESS</span>ERTS</h2>
             <ul>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Farandole de desserts</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">Du chef</p>
-                      <p class="item__subBody__price">18€</p>
+                    <div class="container-price">
+                      <p class="subheading">Du chef</p>
+                      <p class="price">18€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -248,14 +246,12 @@
                 </div>
               </li>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Crème brulée</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">
-                      Revisitée
-                      </p>
-                      <p class="item__subBody__price">22€</p>
+                    <div class="container-price">
+                      <p class="subheading">Revisitée</p>
+                      <p class="price">22€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -264,14 +260,12 @@
                 </div>
               </li>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Tiramisu</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">
-                      À la noisette
-                      </p>
-                      <p class="item__subBody__price">23€</p>
+                    <div class="container-price">
+                      <p class="subheading">À la noisette</p>
+                      <p class="price">23€</p>
                     </div>
                   </div>
                   <div class="item__check">

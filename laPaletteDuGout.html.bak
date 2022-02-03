@@ -16,7 +16,7 @@
     <!-- intégration des feuilles de style internes -->
     <link rel="stylesheet" href="public/css/style.css" />
 
-    <title>OMF - Le délice des sens</title>
+    <title>OMF - La palette du goût</title>
 
     <!-- Fav-icon -->
     <link
@@ -51,14 +51,14 @@
       <!--******************* IMAGE *******************-->
       <img
         class="main-menu__img"
-        src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-        alt="le_delice_des_sens_image"
+        src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="la_palette_du_gout_image"
       />
 
       <div class="restaurant-container">
         <!--******************* RESTAURANT NAME *******************-->
         <div class="restaurant-container__name">
-          <h1>Le délice des sens</h1>
+          <h1>La palette du goût</h1>
           <svg
             class="restaurant-container__favorite"
             version="1.1"
@@ -128,10 +128,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Tartare de thon</h3>
+                    <h3>Fricassée d'escargot</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Assaisonné au yuzu
+                        Au piment d'Espelette
                       </p>
                       <p class="item__subBody__price">25€</p>
                     </div>
@@ -144,10 +144,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Bouchée de homard croustillant</h3>
+                    <h3>Foie gras de canard mi-cuit</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                        Et sa farandole de petits légumes
+                        Et ses copeaux de truffe noire
                       </p>
                       <p class="item__subBody__price">35€</p>
                     </div>
@@ -160,10 +160,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Velouté de cèpes</h3>
+                    <h3>Oeuf au plat</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Aux truffes
+                        Assaisonné à la truffe sur lit de caviar
                       </p>
                       <p class="item__subBody__price">20€</p>
                     </div>
@@ -182,10 +182,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Poulet rôti aux herbes de Provence</h3>
+                    <h3>Filet de boeuf aux herbes</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Et sa crème de truffe
+                        Accompagné de sa ribambelle de légumes
                       </p>
                       <p class="item__subBody__price">40€</p>
                     </div>
@@ -198,10 +198,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Langouste rôtie</h3>
+                    <h3>Parmentier de queue de boeuf</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Et ses légumes de saison
+                        À la truffe noire sur sa purée de panais
                       </p>
                       <p class="item__subBody__price">35€</p>
                     </div>
@@ -214,11 +214,9 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Côte de boeuf Angus</h3>
+                    <h3>Filet de turbot</h3>
                     <div class="item__subBody">
-                      <p class="item__subBody__description">
-                      Et sa purée de panais
-                      </p>
+                      <p class="subheading">Aux agrumes</p>
                       <p class="item__subBody__price">44€</p>
                     </div>
                   </div>
@@ -236,9 +234,9 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Farandole de desserts</h3>
+                    <h3>Paris-Brest</h3>
                     <div class="item__subBody">
-                      <p class="item__subBody__description">Du chef</p>
+                      <p class="item__subBody__description">Revisité</p>
                       <p class="item__subBody__price">18€</p>
                     </div>
                   </div>
@@ -250,10 +248,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Crème brulée</h3>
+                    <h3>Macaron au chocolat d'exception</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      Revisitée
+                        Et glace à la vanille de Madagascar
                       </p>
                       <p class="item__subBody__price">22€</p>
                     </div>
@@ -266,10 +264,10 @@
               <li>
                 <div class="item">
                   <div class="item__body">
-                    <h3>Tiramisu</h3>
+                    <h3>Mousse au chocolat</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                      À la noisette
+                        Au piment d'Espelette et à la truffe noire
                       </p>
                       <p class="item__subBody__price">23€</p>
                     </div>
