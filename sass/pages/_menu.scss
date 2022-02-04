@@ -1,0 +1,206 @@
+/************************************** MAIN **************************************/
+.main-menu {
+  &__img {
+    width: 100%;
+    height: 275px;
+  }
+}
+
+/************************************** RESTAURANT **************************************/
+.restaurant-container {
+  background-color: $backgroundLight;
+  padding: 20px 5vw;
+
+  position: relative;
+  top: -58px;
+  margin-bottom: -58px;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  @include tablet-layout {
+    margin: 3vw 10vw -3vw;
+    top: -80px;
+    border-radius: 40px;
+  }
+  @include desktop-layout {
+    max-width: 1600px;
+    margin: 3vw auto -3vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & h1 {
+      margin: 20px 7px 10px;
+      font-weight: 500;
+
+      @include desktop-layout {
+        margin-left: 2vw;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__favorite {
+    margin-right: 20px;
+  }
+}
+
+/*********************************** FORMULA ***********************************/
+.formula-container {
+  padding-top: 2px;
+
+  @include desktop-layout {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 3%;
+
+    & section {
+      width: 33%;
+    }
+  }
+
+  & h2 {
+    font-size: map-get($menuFontSize, "h2");
+    font-weight: 300;
+    padding-left: 7px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include desktop-layout {
+      font-size: 1.2em;
+    }
+
+    & span {
+      padding-bottom: 4px;
+      border-bottom: 3px solid $tertiaryColor;
+    }
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+    margin-bottom: 30px;
+  }
+}
+
+.item {
+  width: 100%;
+  margin: 7px 0;
+  padding-left: 3%;
+  background-color: $background;
+
+  border: none;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include shadow;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  &__body {
+    width: 100%;
+    overflow: hidden;
+
+    & h3 {
+      font-size: map-get($menuFontSize, "h3");
+      margin: 11px 0 2px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__subBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &__description,
+    &__price {
+      margin: 3px 0 12px;
+    }
+
+    &__description {
+      font-size: map-get($menuFontSize, "p");
+      font-weight: 300;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__price {
+      font-size: 1.02em;
+      font-weight: 900;
+      margin-left: 3.8%;
+    }
+  }
+
+  &__check {
+    width: 25%;
+    margin-left: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $tertiaryColor;
+    color: $background;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    /* anim */
+    margin-right: -25%;
+    transition: all 0.4s;
+
+    & i {
+      transition: all 0.4s 0.08s;
+    }
+  }
+
+  &:hover &__check {
+    margin-right: 0;
+
+    & i {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@mixin animate-items($maps: $animate-item-maps) {
+  @each $name, $offset in $maps {
+    @for $i from 1 through 4 {
+      & .#{$name}-section li:nth-child(#{$i}) {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: item-appearance 3s #{$i * 0.2 - 0.2 + $offset}s forwards;
+      }
+    }
+  }
+}
+
+.formula-container {
+  @include animate-items;
+}
+
+/*********************************** COMMAND ***********************************/
+.checkout-container {
+  text-align: center;
+
+  &__button {
+    margin: 10px auto 35px;
+  }
+}

@@ -1,0 +1,32 @@
+/************************************** FOOTER **************************************/
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 25px;
+
+  @include tablet-layout {
+    text-align: center;
+
+    & ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  & h3 {
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.03em;
+    font-weight: 300;
+    margin: 0 0 20px;
+  }
+
+  & p {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+
+  & i {
+    padding-right: 10px;
+  }
+}

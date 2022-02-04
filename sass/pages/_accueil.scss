@@ -1,0 +1,342 @@
+/************************************** LOADING BARS **************************************/
+.loading-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba($primaryColor, 0.65);
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: loading 0.5s 2.5s forwards;
+}
+
+.loadbars-container {
+  width: 15vh;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__bar {
+    background-color: $tertiaryColor;
+    height: 100%;
+    width: 1.5vh;
+
+    &--norm {
+      @include animate-bars();
+    }
+
+    &--inv {
+      margin-top: -10px;
+      @include animate-bars(1);
+    }
+  }
+}
+
+/************************************** MAIN **************************************/
+
+@include desktop-layout {
+  .main_accueil {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 70px;
+  }
+}
+
+/************************************** SEARCH SECTION **************************************/
+.search-section {
+  background-color: $backgroundLight;
+  text-align: center;
+
+  @include desktop-layout {
+    width: 100%;
+  }
+}
+
+.search-form {
+  background-color: $backgroundDark;
+  padding: 15px 0;
+  box-shadow: 0px 10px 5px -10px rgba(0, 0, 0, 0.35) inset;
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__input {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    font-weight: 500;
+    width: 110px;
+    margin-left: 15px;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.explore-form {
+  padding: 30px 0;
+
+  & h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 12vw;
+  }
+
+  & p {
+    margin: 10px 0;
+    padding: 0 5vw;
+    font-weight: 300;
+  }
+
+  &__input {
+    margin: 25px 0;
+  }
+}
+
+/************************************** FUNCTIONING SECTION **************************************/
+.funct-section {
+  padding: 38px 5.3vw 57.5px;
+
+  @include desktop-layout {
+    width: 30%;
+  }
+
+  & ul {
+    @include tablet-layout {
+      display: flex;
+      justify-content: space-between;
+      gap: 2em;
+    }
+    @include desktop-layout {
+      flex-direction: column;
+    }
+  }
+
+  & h2 {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    @include desktop-layout {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    width: calc(100% - 12.5px);
+    margin: 13.5px 0;
+    padding: 25px 0;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    background-color: $backgroundLight;
+
+    @include shadow;
+
+    position: relative;
+    left: 12.5px;
+
+    text-align: left;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    @include tablet-layout {
+      padding-right: 20px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    & .number {
+      background-color: $primaryColor;
+      color: $background;
+      border-radius: 50%;
+
+      font-weight: 400;
+      font-size: 13px;
+      padding-top: 2px;
+
+      position: absolute;
+      left: -12.5px;
+      top: 22.5px;
+
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet-layout {
+        position: relative;
+
+        min-width: 25px;
+        left: -12.5px;
+        top: 0;
+      }
+    }
+
+    & i {
+      margin-left: 8vw;
+      margin-right: 5vw;
+
+      @include tablet-layout {
+        margin-left: 7.5px;
+        margin-right: 20px;
+        display: block;
+      }
+
+      color: $funtIconBackground;
+    }
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.15);
+
+      & i {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+/************************************** RESTAURANTS SECTION **************************************/
+.resto-section {
+  background-color: $backgroundLight;
+  padding: 30px 5.3vw 65px;
+
+  @include tablet-layout {
+    border-radius: 40px;
+    margin-bottom: 70px;
+
+    & h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include desktop-layout {
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  & ul {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 5vw;
+
+    @include tablet-layout {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      row-gap: 2.5vw;
+
+      & li {
+        width: 48.5%;
+      }
+    }
+    @include desktop-layout {
+      row-gap: 1.5vw;
+    }
+  }
+}
+
+.card {
+  display: block;
+
+  border-radius: 15px;
+  @include tablet-layout {
+    border-radius: 25px;
+  }
+
+  background-color: $background;
+
+  position: relative;
+
+  @include shadow;
+  transition: all 0.3s ease;
+
+  &__img {
+    height: 46vw;
+    width: 100%;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    @include tablet-layout {
+      height: 23vw;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+    @include desktop-layout {
+      height: 15vw;
+    }
+  }
+
+  &__new {
+    margin: 0; /* reset normalize.css */
+
+    position: absolute;
+    top: 4vw;
+    right: 4vw;
+    @include tablet-layout {
+      top: 2vw;
+      right: 2vw;
+    }
+    @include desktop-layout {
+      top: 1.5vw;
+      right: 1.5vw;
+    }
+
+    background-color: $tertiaryColor;
+    color: $tertiaryGreenDark;
+
+    padding: 6px 13px;
+    border-radius: 2px;
+    @include shadow;
+
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 12px;
+    height: 72px;
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 3px;
+      font-weight: 800;
+      font-size: map-get($accueilFontSize, "h3");
+    }
+
+    & p {
+      margin-top: 4px;
+      margin-bottom: 0;
+      font-weight: 300;
+      font-size: map-get($accueilFontSize, "pCard");
+    }
+
+    &__favorite {
+      margin-top: 20px;
+      margin-bottom: auto;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.04);
+    @include shadow($fullShadow, $primaryColor);
+  }
+}

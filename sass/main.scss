@@ -1,0 +1,21 @@
+/* Système de fichiers 7-1 => ordre d'importation
+1. Utils : Variables / Fonctions / Mixins /  (Placeholders)
+2. Vendors
+3. Base
+4. Composants
+5. Layout
+6. Pages
+7. Thèmes */
+
+@import "./vendors/normalize";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./components/icons";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./pages/accueil";
+@import "./pages/menu";

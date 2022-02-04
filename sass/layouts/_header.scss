@@ -1,0 +1,20 @@
+/************************************** HEADER **************************************/
+header {
+  position: relative;
+
+  @include tablet-layout {
+    margin: 30px 0;
+  }
+
+  & i {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+  }
+
+  & h1 {
+    text-align: center;
+    margin-top: 0.85em;
+    margin-bottom: 0.3em;
+  }
+}
