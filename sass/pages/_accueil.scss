@@ -1,56 +1,4 @@
-/************************************** ANIMATION **************************************/
-@keyframes bars {
-  from {
-    transform: scaleY(0.5);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-@keyframes loading {
-  to {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes fill-gradient-anim {
-  to {
-    transform: scale(1);
-  }
-}
-
-@mixin animate-bars($reverse: 0) {
-  @if $reverse == 1 {
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        animation: bars
-          1s
-          #{$i *
-          0.2}s
-          backwards
-          infinite
-          ease-in-out
-          alternate-reverse;
-      }
-    }
-  } @else {
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        animation: bars
-          1s
-          #{$i *
-          0.2}s
-          backwards
-          infinite
-          ease-in-out
-          alternate;
-      }
-    }
-  }
-}
-
-/************************************** LOADING ANIM **************************************/
-
+/************************************** LOADING BARS **************************************/
 .loading-container {
   position: fixed;
   top: 0;
@@ -320,8 +268,6 @@
   &__img {
     height: 46vw;
     width: 100%;
-
-    object-fit: cover;
 
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;

@@ -347,6 +347,34 @@ template {
   display: none;
 }
 
+/******* FILLING FAVORITE ICON HEART ******/
+@keyframes fill-gradient-anim {
+  to {
+    transform: scale(1);
+  }
+}
+/******* ACCUEIL : LOADING BARS ******/
+@keyframes bars {
+  from {
+    transform: scaleY(0.5);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes loading {
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/******* MENUS ******/
+@keyframes item-appearance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /************************************** BOX SIZING **************************************/
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -368,6 +396,11 @@ li {
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+/************************************** IMAGES **************************************/
+img {
+  object-fit: cover;
 }
 
 body {
@@ -482,27 +515,7 @@ footer i {
   padding-right: 10px;
 }
 
-/************************************** ANIMATION **************************************/
-@keyframes bars {
-  from {
-    transform: scaleY(0.5);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-@keyframes loading {
-  to {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes fill-gradient-anim {
-  to {
-    transform: scale(1);
-  }
-}
-/************************************** LOADING ANIM **************************************/
+/************************************** LOADING BARS **************************************/
 .loading-container {
   position: fixed;
   top: 0;
@@ -777,7 +790,6 @@ footer i {
 .card__img {
   height: 46vw;
   width: 100%;
-  object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -847,23 +859,10 @@ footer i {
   box-shadow: 0 0 10px 2px #9356dc;
 }
 
-/************************************** ANIM **************************************/
-@keyframes fill-gradient-anim {
-  to {
-    transform: scale(1);
-  }
-}
-@keyframes item-appearance {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /************************************** MAIN **************************************/
 .main-menu__img {
   width: 100%;
   height: 275px;
-  object-fit: cover;
 }
 
 /************************************** RESTAURANT **************************************/

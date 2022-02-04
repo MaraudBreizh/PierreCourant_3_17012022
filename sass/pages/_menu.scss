@@ -1,22 +1,8 @@
-/************************************** ANIM **************************************/
-@keyframes fill-gradient-anim {
-  to {
-    transform: scale(1);
-  }
-}
-@keyframes item-appearance {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /************************************** MAIN **************************************/
 .main-menu {
   &__img {
     width: 100%;
     height: 275px;
-    object-fit: cover;
   }
 }
 
