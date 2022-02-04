@@ -24,7 +24,7 @@
     border-radius: 40px;
   }
   @include desktop-layout {
-    max-width: 1220px;
+    max-width: 1024px;
     margin: 3vw auto -3vw;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -58,7 +58,11 @@
   @include desktop-layout {
     display: flex;
     justify-content: space-around;
-    column-gap: 2vw;
+    column-gap: 3%;
+
+    & section {
+      width: 33%;
+    }
   }
 
   & h2 {
@@ -75,7 +79,7 @@
 
     & span {
       padding-bottom: 4px;
-      border-bottom: 3px solid #99e2d0;
+      border-bottom: 3px solid $tertiaryColor;
     }
   }
 
@@ -102,6 +106,7 @@
   @include shadow;
 
   overflow: hidden;
+  cursor: pointer;
 
   &__body {
     width: 100%;

@@ -403,6 +403,11 @@ img {
   object-fit: cover;
 }
 
+/************************************** IMAGES **************************************/
+svg {
+  cursor: pointer;
+}
+
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -884,7 +889,7 @@ footer i {
 }
 @media all and (min-width: 992px) {
   .restaurant-container {
-    max-width: 1220px;
+    max-width: 1024px;
     margin: 3vw auto -3vw;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -917,7 +922,10 @@ footer i {
   .formula-container {
     display: flex;
     justify-content: space-around;
-    column-gap: 2vw;
+    column-gap: 3%;
+  }
+  .formula-container section {
+    width: 33%;
   }
 }
 .formula-container h2 {
@@ -954,6 +962,7 @@ footer i {
   justify-content: space-between;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  cursor: pointer;
 }
 .item__body {
   width: 100%;
