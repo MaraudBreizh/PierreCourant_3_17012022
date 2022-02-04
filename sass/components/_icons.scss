@@ -1,0 +1,27 @@
+.heart {
+  display: block;
+  width: 23px;
+  height: auto;
+
+  &--empty {
+    stroke: black;
+    fill: none;
+  }
+
+  &--growing {
+    fill: none;
+    transform: scale(0.1);
+  }
+
+  &:hover &--empty {
+    stroke: url(#gradient);
+  }
+
+  /* fill the heart progressively from center */
+  &:hover &--growing {
+    fill: url(#gradient);
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: fill-gradient-anim 0.2s linear 0s forwards;
+  }
+}

@@ -60,12 +60,13 @@
         <div class="restaurant-container__name">
           <h1>Le délice des sens</h1>
           <svg
-            class="restaurant-container__favorite heart"
+            class="restaurant-container__favorite"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 15 15"
             xml:space="preserve"
+            class="heart"
           >
             <defs>
               <linearGradient
@@ -96,7 +97,7 @@
             </defs>
 
             <path
-              class="heart--empty"
+              class="restaurant-container__favorite--emptyHeart"
               d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
 	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
             />
@@ -111,7 +112,7 @@
 
             <g clip-path="url(#mask)">
               <path
-                class="heart--growing"
+                class="restaurant-container__favorite--fullHeart"
                 d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
 	C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"
               />
@@ -130,7 +131,7 @@
                     <h3>Tartare de thon</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                        Assaisonné au yuzu
+                      Assaisonné au yuzu
                       </p>
                       <p class="item__subBody__price">25€</p>
                     </div>
@@ -161,7 +162,9 @@
                   <div class="item__body">
                     <h3>Velouté de cèpes</h3>
                     <div class="item__subBody">
-                      <p class="item__subBody__description">Aux truffes</p>
+                      <p class="item__subBody__description">
+                      Aux truffes
+                      </p>
                       <p class="item__subBody__price">20€</p>
                     </div>
                   </div>
@@ -182,7 +185,7 @@
                     <h3>Poulet rôti aux herbes de Provence</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                        Et sa crème de truffe
+                      Et sa crème de truffe
                       </p>
                       <p class="item__subBody__price">40€</p>
                     </div>
@@ -198,7 +201,7 @@
                     <h3>Langouste rôtie</h3>
                     <div class="item__subBody">
                       <p class="item__subBody__description">
-                        Et ses légumes de saison
+                      Et ses légumes de saison
                       </p>
                       <p class="item__subBody__price">35€</p>
                     </div>
@@ -209,14 +212,12 @@
                 </div>
               </li>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Côte de boeuf Angus</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">
-                        Et sa purée de panais
-                      </p>
-                      <p class="item__subBody__price">44€</p>
+                    <div class="container-price">
+                      <p class="subheading">Et sa purée de panais</p>
+                      <p class="price">44€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -231,12 +232,12 @@
             <h2><span>DESS</span>ERTS</h2>
             <ul>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Farandole de desserts</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">Du chef</p>
-                      <p class="item__subBody__price">18€</p>
+                    <div class="container-price">
+                      <p class="subheading">Du chef</p>
+                      <p class="price">18€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -245,12 +246,12 @@
                 </div>
               </li>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Crème brulée</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">Revisitée</p>
-                      <p class="item__subBody__price">22€</p>
+                    <div class="container-price">
+                      <p class="subheading">Revisitée</p>
+                      <p class="price">22€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -259,12 +260,12 @@
                 </div>
               </li>
               <li>
-                <div class="item">
-                  <div class="item__body">
+                <div class="menu-items">
+                  <div class="menu-items-text">
                     <h3>Tiramisu</h3>
-                    <div class="item__subBody">
-                      <p class="item__subBody__description">À la noisette</p>
-                      <p class="item__subBody__price">23€</p>
+                    <div class="container-price">
+                      <p class="subheading">À la noisette</p>
+                      <p class="price">23€</p>
                     </div>
                   </div>
                   <div class="item__check">
@@ -278,7 +279,7 @@
 
         <!-- COMMAND -->
         <div class="checkout-container">
-          <button class="checkout-container__button btn-cta">Commander</button>
+          <button class="checkout-container__button">Commander</button>
         </div>
       </div>
     </main>

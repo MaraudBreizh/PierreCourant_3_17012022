@@ -1,0 +1,31 @@
+/************************************** BOX SIZING **************************************/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/************************************** UNDO normalize.css SETTINGS **************************************/
+a,
+ul,
+li {
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/************************************** IMAGES **************************************/
+img {
+  object-fit: cover;
+}
+
+/************************************** IMAGES **************************************/
+svg {
+  cursor: pointer;
+}
