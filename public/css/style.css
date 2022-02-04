@@ -889,7 +889,7 @@ footer i {
 }
 @media all and (min-width: 992px) {
   .restaurant-container {
-    max-width: 1024px;
+    max-width: 1600px;
     margin: 3vw auto -3vw;
     padding-left: 2vw;
     padding-right: 2vw;
